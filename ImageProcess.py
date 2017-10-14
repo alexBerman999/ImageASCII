@@ -1,7 +1,7 @@
 import numpy
 from PIL import Image
 
-charScale = "@%#*+=-:.\"" #List of characters from light to dark by apparant shading
+charScale = "@%#*+=-:.\" " #List of characters from light to dark by apparant shading
 scale = 0.125 #Scale to modify image size by
 
 def imgToAscii(img):
@@ -25,7 +25,7 @@ def imgToAscii(img):
       asciiImgChars[i].append(charScale[val])
   return asciiImgChars
 
-img = Image.open("tests/test2.jpg", "r")
+img = Image.open("tests/test.jpg", "r")
 ascii = imgToAscii(img)
 f = open("tests/test.txt", "w")
 for i in range(len(ascii)):
