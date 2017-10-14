@@ -25,6 +25,16 @@ def imgToAscii(img):
       asciiImgChars[i].append(charScale[val])
   return asciiImgChars
 
+#Turn an ascii character array into an html string for use in a webpage
+def asciiArrayToHtml(ascii):
+  html = "<div>\n"
+  for i in range(len(ascii)):
+    for j in range(len(ascii[0])):
+      html += ascii[i][j]
+    html += "<br>\n"
+  html += "</div>"
+  return html
+
 img = Image.open("tests/test.jpg", "r")
 ascii = imgToAscii(img)
 f = open("tests/test.txt", "w")
@@ -32,4 +42,5 @@ for i in range(len(ascii)):
     for j in range(len(ascii[0])):
       f.write(ascii[i][j])
     f.write("\n")
+f.write(asciiArrayToHtml(ascii))
 f.close()
