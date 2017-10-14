@@ -1,8 +1,8 @@
 import numpy
 from PIL import Image
 
-charScale = "\".:-=+*#%@" #List of characters from light to dark by apparant shading
-scale = 0.25 #Scale to modify image size by
+charScale = "@%#*+=-:.\"" #List of characters from light to dark by apparant shading
+scale = 0.125 #Scale to modify image size by
 
 def imgToAscii(img):
   #Reduce image size
