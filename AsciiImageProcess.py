@@ -1,14 +1,13 @@
 import numpy
 from PIL import Image
 
-charScale = "@%#*+=-:.\" " #List of characters from light to dark by apparant shading
-scale = 0.125 #Scale to modify image size by
+charScale = "@%#*+=-:.\"" #List of characters from light to dark by apparant shading
 
 def imgToAscii(imgPath):
   #Read image
   img = Image.open(imgPath, "r")
   #Reduce image size
-  scaleSize = (int(img.size[0] * 2 * scale), int(img.size[1] * scale)) #Double width as characters are taller than they are wide
+  scaleSize = (256, int(img.size[1] * (256/img.size[0]))) #Double width as characters are taller than they are wide
   img = img.resize(scaleSize, Image.ANTIALIAS)
   #Convert to greyscale
   img = img.convert('L')
