@@ -7,7 +7,7 @@ def imgToAscii(imgPath):
   #Read image
   img = Image.open(imgPath, "r")
   #Reduce image size
-  scaleSize = (300, int(img.size[1] * (300/img.size[0]))) #Double width as characters are taller than they are wide
+  scaleSize = (300, int(img.size[1] * (150/img.size[0]))) #Double width as characters are taller than they are wide
   img = img.resize(scaleSize, Image.ANTIALIAS)
   #Convert to greyscale
   img = img.convert('L')
