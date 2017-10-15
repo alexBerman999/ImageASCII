@@ -36,12 +36,3 @@ def asciiArrayToHtml(ascii):
     html += "<br>\n"
   html += "</div>"
   return html
-
-#ascii = imgToAscii(img)
-#f = open("tests/test.txt", "w")
-#for i in range(len(ascii)):
-#    for j in range(len(ascii[0])):
-#      f.write(ascii[i][j])
-#    f.write("\n")
-#f.write(asciiArrayToHtml(ascii))
-#f.close()
