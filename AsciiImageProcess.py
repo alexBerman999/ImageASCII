@@ -1,13 +1,13 @@
 import numpy
 from PIL import Image
 
-charScale = "@%#*+=-:.\"" #List of characters from light to dark by apparant shading
+charScale = "MNBKVFT|;:."#"@%8#*+=!~-:." #List of characters from light to dark by apparant shading
 
 def imgToAscii(imgPath):
   #Read image
   img = Image.open(imgPath, "r")
   #Reduce image size
-  scaleSize = (256, int(img.size[1] * (256/img.size[0]))) #Double width as characters are taller than they are wide
+  scaleSize = (300, int(img.size[1] * (150/img.size[0]))) #Double width as characters are taller than they are wide
   img = img.resize(scaleSize, Image.ANTIALIAS)
   #Convert to greyscale
   img = img.convert('L')
@@ -28,7 +28,7 @@ def imgToAscii(imgPath):
 
 #Turn an ascii character array into an html string for use in a webpage
 def asciiArrayToHtml(ascii):
-  html = "<div id=\"asciiArt\">\n"
+  html = "<div id=\"asciiArt\" style = \"font-size: 0.3%;\">\n"
   for i in range(len(ascii)):
     for j in range(len(ascii[0])):
       html += ascii[i][j]
