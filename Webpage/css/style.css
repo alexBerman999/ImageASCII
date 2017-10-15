@@ -25,10 +25,10 @@ h1 {
   margin-bottom: 32px;
 }
 
-#img {
+#img img {
   text-align: center;
-  width:80vw;
-  height:80vh;
+  width:100%;
+  height:auto;
   margin-top: 32px;
   margin-bottom: 32px;
 }
