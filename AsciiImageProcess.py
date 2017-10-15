@@ -4,16 +4,18 @@ from PIL import Image
 charScale = "@%#*+=-:.\" " #List of characters from light to dark by apparant shading
 scale = 0.125 #Scale to modify image size by
 
-def imgToAscii(img):
+def imgToAscii(imgPath):
+  #Read image
+  img = Image.open(imgPath, "r")
   #Reduce image size
   scaleSize = (int(img.size[0] * 2 * scale), int(img.size[1] * scale)) #Double width as characters are taller than they are wide
-  imgMod = img.resize(scaleSize, Image.ANTIALIAS)
+  img = img.resize(scaleSize, Image.ANTIALIAS)
   #Convert to greyscale
-  imgMod = imgMod.convert('L')
+  img = img.convert('L')
   
   #Get data of pixels
-  pixels = list(imgMod.getdata(0)) #Gets value of only red pixels as, in a greyscale image, r = g = b
-  width, height = imgMod.size
+  pixels = list(img.getdata(0)) #Gets value of only red pixels as, in a greyscale image, r = g = b
+  width, height = img.size
   pixels = [pixels[i * width:(i + 1) * width] for i in range(height)] #reformating into a 2D array
   
 #Storing corresponding ascii arrangement in an array to be returned
@@ -27,7 +29,7 @@ def imgToAscii(img):
 
 #Turn an ascii character array into an html string for use in a webpage
 def asciiArrayToHtml(ascii):
-  html = "<div>\n"
+  html = "<div id=\"asciiArt\">\n"
   for i in range(len(ascii)):
     for j in range(len(ascii[0])):
       html += ascii[i][j]
@@ -35,12 +37,11 @@ def asciiArrayToHtml(ascii):
   html += "</div>"
   return html
 
-img = Image.open("tests/test.jpg", "r")
-ascii = imgToAscii(img)
-f = open("tests/test.txt", "w")
-for i in range(len(ascii)):
-    for j in range(len(ascii[0])):
-      f.write(ascii[i][j])
-    f.write("\n")
-f.write(asciiArrayToHtml(ascii))
-f.close()
+#ascii = imgToAscii(img)
+#f = open("tests/test.txt", "w")
+#for i in range(len(ascii)):
+#    for j in range(len(ascii[0])):
+#      f.write(ascii[i][j])
+#    f.write("\n")
+#f.write(asciiArrayToHtml(ascii))
+#f.close()
