@@ -7,9 +7,12 @@
   </head>
   <body>
     <h1>ASCII Converter</h1>
+    <div id="fileSelectionWrapper">
+      <button onclick="document.getElementById('fileSelection').click();">Open</button>
+      <input id="fileSelection" name="fileSelection" type="file" style="display: none;" />
+    </div>    
     <div class="wrapper">
       <form action="convert.php" method="post">
-        <input name="file-input" type="file">
         <input type="submit">
       </form>
     </div>

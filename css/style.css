@@ -12,20 +12,30 @@ h1 {
 	color: #FFFFFF;
 	background-color: #455A64;
 	padding: 5px;
+  margin: 0px;
 	box-shadow: 0px 0px 10px 1px #000000;
 }
 
-button {
+button, input[type=submit] {
   color: #FFFFFF;
   background-color:#009688;
   font-size: 150%;
   text-align: center;
   width:20%;
   height: 20%;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  display: block;
+  margin: auto;
+  margin-top: 32px;
   border: none;
+  box-shadow: 0px 0px 10px 1px #000000;
 }
+
+#fileSelectionWrapper {
+  width: 80%	
+  margin: auto;
+  margin-top: 10%;
+}
+
 #asciiArt {
   font-size: 0.5vw;
   text-align: center;
