@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 html, body {
-  color: #000000;
-	background-color: #FFFFFF;
+  color: #FFFFFF;
+	background-color: #607D8B;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 150%;
-	margin: 0;
+  position: relative;
 	padding: 0;
 }
 h1 {
 	color: #FFFFFF;
 	background-color: #455A64;
 	padding: 5px;
-	margin: 0;
-	text-align: center;
-	position: relative;
 	box-shadow: 0px 0px 10px 1px #000000;
 }
 
@@ -22,30 +19,25 @@ button {
   color: #FFFFFF;
   background-color:#009688;
   font-size: 150%;
+  text-align: center;
   width:20%;
   height: 20%;
   margin-top: 12px;
   margin-bottom: 12px;
   border: none;
 }
-
-.wrapper {
+#asciiArt {
+  font-size: 0.5vw;
   text-align: center;
+  width: 80%	
+  margin: auto;
+  margin-top: 24px;
 }
 
-.AsciiArt {
-  font-family: 'Roboto Mono', monospace;
+#img {
   text-align: center;
-	position: relative;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.img img {
-  text-align: center;
-	position: relative;
-  width:100%;
-  height:auto;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  width:80%;
+  height: auto;
+  margin: auto;
+  margin-top: 24px;
 }

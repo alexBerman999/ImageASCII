@@ -1,7 +1,7 @@
 import numpy
 from PIL import Image
 
-charScale = "MNBKVFT|;:."#"@%8#*+=!~-:." #List of characters from light to dark by apparant shading
+charScale = "MNBKVFT|;:." #List of characters from light to dark by apparant shading
 
 def imgToAscii(imgPath):
   #Read image
