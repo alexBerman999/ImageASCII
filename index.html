@@ -8,11 +8,12 @@
   <body>
     <h1>ASCII Converter</h1>
     <div id="fileSelectionWrapper">
-      <button onclick="document.getElementById('fileSelection').click();">Open</button>
-      <input id="fileSelection" name="fileSelection" type="file" style="display: none;" />
+      
     </div>    
     <div class="wrapper">
-      <form action="convert.php" method="post">
+      <button onclick="document.getElementById('fileSelection').click();">Open</button>
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileSelection" id="fileSelection" style="display: none;" />
         <input type="submit">
       </form>
     </div>
