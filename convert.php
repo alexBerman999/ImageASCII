@@ -8,10 +8,14 @@
   <body>
     <h1>ASCII Converter</h1>
     <?php
-      move_uploaded_file($_FILES["fileSelection"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
-      $command = escapeshellcmd("python3 HtmlGenerator.py "$_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
-      shell_exec($command);
-      exit;
+        $target_file = basename($_FILES["fileSelection"]["name"]);
+        $command = escapeshellcmd("python3 HtmlGenerator.py ".$_FILES["fileSelection"]["tmp_name"]);
+        echo shell_exec($command);
+        exit;
+      //move_uploaded_file($_FILES["fileSelection"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
+      //$command = escapeshellcmd("python3 HtmlGenerator.py "."test.jpg");//$_FILES["fileSelection"]["tmp_name"]);//$_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
+      //shell_exec($command);
+      //exit;
     ?>
   </body>
 </html>
