@@ -41,9 +41,9 @@ button, input[type=submit] {
   color: #FFFFFF;
   background-color: #B8002B;
   margin: 0px;
-  padding: 5px;
+  padding: 4px;
   width:100%;
-  font-size: 33%;
+  font-size: 25%;
 }
 
 #blueHeader {
