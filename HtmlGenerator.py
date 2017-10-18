@@ -10,6 +10,7 @@ ascii = AsciiImageProcess.imgToAscii(loc)
 #Consistent stuff
 #f.write("<html>\n\t<head>\n\t\t<title>ASCII Art</title>\n\t\t<meta content=\"\">\n\t\t<link rel=\"stylesheet\" href=\"css/style.css\">\n\t</head>\n\t<body>\n\t\t<h1>\n\t\t\tASCII Converter\n\t\t</h1>")
 #f.write(AsciiImageProcess.asciiArrayToHtml(ascii))
+print("<h1>" + loc + "</h1>")
 print(AsciiImageProcess.asciiArrayToHtml(ascii))
 #f.write("\n\t\t<div id=\"img\">\n\t\t\t<img src = " + loc + " alt=\"Image\">\n\t\t</div>\n\t</body>\n</html>")
 #f.close()
