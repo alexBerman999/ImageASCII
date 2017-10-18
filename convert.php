@@ -9,9 +9,7 @@
     <h1>ASCII Converter</h1>
     <?php
       $target_file = basename($_FILES["fileSelection"]["name"]);
-      move_uploaded_file($_FILES["fileSelection"][$target_file], $target_file)
-      echo("<h2>".$target_file."</h2>");
-      $command = escapeshellcmd("python3 HtmlGenerator.py testImgs/test.jpg");
+      $command = escapeshellcmd("python3 HtmlGenerator.py ".$_FILES["fileSelection"]["tmp_name"]);
       $newURL = shell_exec($command);
       //header("Location: ".$newURL);
       //exit;
