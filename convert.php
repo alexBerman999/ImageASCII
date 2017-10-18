@@ -10,9 +10,10 @@
     <?php
       $target_file = basename($_FILES["fileSelection"]["name"]);
       $command = escapeshellcmd("python3 HtmlGenerator.py ".$_FILES["fileSelection"]["tmp_name"]);
-      $newURL = shell_exec($command);
+      echo $command;
+      shell_exec($command);
       //header("Location: ".$newURL);
-      //exit;
+      exit;
     ?>
   </body>
 </html>
