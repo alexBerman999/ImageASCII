@@ -7,15 +7,18 @@
   </head>
   <body>
     <h1>ASCII Converter</h1>
-    <div id="fileSelectionWrapper">
-      
-    </div>    
+    <div class="header">
+      <h2>ASCII Converter supports JPG, PNG, and BMP file formats.</h2>
+    </div>  
     <div class="wrapper">
       <button onclick="document.getElementById('fileSelection').click();">Open</button>
       <form action="convert.php" method="post" enctype="multipart/form-data">
         <input type="file" name="fileSelection" id="fileSelection" style="display: none;" />
         <input type="submit">
       </form>
+    </div>
+    <div class="header">
+      &nbsp;</br></br></br>      
     </div>
   </body>
 </html>
