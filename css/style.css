@@ -35,6 +35,12 @@ button, input[type=submit] {
   margin-top: 32px;
   margin-bottom: 32px;
   border: none;
+  transition: box-shadow 1s;
+}
+
+button:hover, input:hover {
+    box-shadow: 3px 3px 1px #132c56;
+    transition: box-shadow 1s;
 }
 
 .header {
@@ -59,7 +65,7 @@ button, input[type=submit] {
 #asciiArt {
   font-size: 0.5vw;
   text-align: center;
-  width: 80%	
+  width: 80%
   margin: auto;
   margin-top: 24px;
   margin-bottom: 24px;
