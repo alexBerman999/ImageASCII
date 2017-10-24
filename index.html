@@ -20,6 +20,7 @@
       <button onclick="document.getElementById('fileSelection').click();">Open</button>
       <form onsubmit="return confirm('By submitting an image to our application, you agree to allow us to keep your converted image on our servers');"
             action="convert.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
         <input type="file" name="fileSelection" id="fileSelection" style="display: none;">
         <input id="submitImage" type="submit">
       </form>
