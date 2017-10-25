@@ -11,8 +11,14 @@
       &nbsp;<br><br><br>
     </div>
     <?php
-        $target_file = basename($_FILES["fileSelection"]["name"]);
-        $command = escapeshellcmd("python3 HtmlGenerator.py ".$_FILES["fileSelection"]["tmp_name"]);
+        $dest = "/var/www/html/ascii/art/";
+        $filename = basename($_FILES["fileSelection"]["name"]);
+        $uploadSuccess = move_uploaded_file($_FILES["fileSelection"]["tmp_name"], "$dest/$filename");
+        if (!$uploadSuccess) {
+            echo "failed to move uploaded file";
+            // Stop running?
+        }
+        $command = escapeshellcmd("python3 HtmlGenerator.py $dest/$filename");
         echo shell_exec($command);
         //move_uploaded_file($_FILES["fileSelection"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
         //$command = escapeshellcmd("python3 HtmlGenerator.py "."test.jpg");//$_FILES["fileSelection"]["tmp_name"]);//$_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
