@@ -11,7 +11,9 @@
       &nbsp;<br><br><br>
     </div>
     <?php
-        $dest = "/var/www/html/ascii/art/";
+        ini_set("display_errors", 1);
+        error_reporting(E_ALL);
+        $dest = "/var/www/html/ascii/art";
         $filename = basename($_FILES["fileSelection"]["name"]);
         $uploadSuccess = move_uploaded_file($_FILES["fileSelection"]["tmp_name"], "$dest/$filename");
         if (!$uploadSuccess) {
