@@ -22,10 +22,6 @@
         }
         $command = escapeshellcmd("python3 HtmlGenerator.py $dest/$filename");
         echo shell_exec($command);
-        //move_uploaded_file($_FILES["fileSelection"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
-        //$command = escapeshellcmd("python3 HtmlGenerator.py "."test.jpg");//$_FILES["fileSelection"]["tmp_name"]);//$_SERVER['DOCUMENT_ROOT'] . 'uploads/' . $_FILES["fileSelection"]["name"]);
-        //shell_exec($command);
-        //exit;
     ?>
     <form action="index.html">
       <input type="submit" value="Back">
