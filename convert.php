@@ -20,7 +20,7 @@
             echo "failed to move uploaded file";
             // Stop running?
         }
-        $command = escapeshellcmd("python3 HtmlGenerator.py $dest/$filename");
+        $command = escapeshellcmd("python3 image_convert.py $dest/$filename");
         echo shell_exec($command);
     ?>
     <form action="index.html">
