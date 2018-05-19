@@ -2,17 +2,17 @@
 
 html, body {
   color: #000000;
-	background-color: #FFFFFF;
-	font-family: 'Roboto Mono', monospace;
+  background-color: #FFFFFF;
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
-	font-size: 150%;
+  font-size: 150%;
   position: relative;
-	padding: 0;
+  padding: 0;
 }
 h1 {
-	color: #FFFFFF;
-	background-color: #000A46;
-  margin: 0px;
+  color: #FFFFFF;
+  background-color: #000A46;
+  margin: 0;
   padding: 5px;
   width:100%;
 }
@@ -31,22 +31,20 @@ button, input[type=submit] {
   width:20%;
   height: 20%;
   display: block;
-  margin: auto;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 32px auto;
   border: none;
   transition: box-shadow 1s;
 }
 
 button:hover, input:hover {
-    box-shadow: 3px 3px 1px #132c56;
-    transition: box-shadow 1s;
+  box-shadow: 3px 3px 1px #132c56;
+  transition: box-shadow 1s;
 }
 
 .header {
   color: #FFFFFF;
   background-color: #B8002B;
-  margin: 0px;
+  margin: 0;
   padding: 4px;
   width:100%;
   font-size: 25%;
@@ -58,23 +56,19 @@ button:hover, input:hover {
 
 #fileSelectionWrapper {
   width: 80%;
-  margin: auto;
-  margin-top: 10%;
+  margin: 10% auto auto;
 }
 
 #asciiArt {
   font-size: 0.5vw;
   text-align: center;
-  width: 80%
-  margin: auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  width: 80%;
+  margin: 24px auto;
 }
 
 #img {
   text-align: center;
   width:80%;
   height: auto;
-  margin: auto;
-  margin-top: 24px;
+  margin: 24px auto auto;
 }
