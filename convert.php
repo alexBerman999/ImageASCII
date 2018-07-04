@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image To Ascii</title>
-    <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>ASCII Converter</h1>
-    <div class="header">
-      &nbsp;<br><br><br>
-    </div>
+    <header>
+      <h1>Jsonet - <span class="page-qualifier">Image ASCII</span></h1>
+      <?php include $_SERVER['DOCUMENT_ROOT'].'/navbar.html' ?>
+    </header>
     <?php
         ini_set("display_errors", 1);
         error_reporting(E_ALL);
@@ -26,8 +28,8 @@
     <form action="index.html">
       <input type="submit" value="Back">
     </form>
-    <div class="header">
-      &nbsp;<br><br><br>
-    </div>
+    <footer>
+      <?php include $_SERVER['DOCUMENT_ROOT'].'/footer.html' ?>
+    </footer>
   </body>
 </html>
