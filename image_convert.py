@@ -39,6 +39,7 @@ def ascii_array_to_html(ascii_list):
     Turn an ascii_list character array into an html string for use in a web page.
 
     :param ascii_list: ascii art image as list
+    :type ascii_list: iterable
 
     :return: html representation of ascii image
     """
